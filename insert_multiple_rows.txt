@@ -1,0 +1,21 @@
+
+Sub InsertMultipleRows()
+
+  Dim insertRows As Integer
+  Dim i As Integer
+
+  insertRowCapacity = 3
+  targetRowNum = 2
+  targetSheet = ActiveSheet.Name
+
+  MsgBox(targetSheet)
+  insertRowCapacity = InputBox("How many rows do you want to insert?")
+  targetRowNum = InputBox("Which row do you want to begin to insert?")
+
+  For i = 1 To insertRowCapacity
+    Sheets(targetSheet).Rows(targetRowNum).Insert
+  Next
+
+  MsgBox("Done")
+
+End Sub
